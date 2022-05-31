@@ -1,0 +1,161 @@
+body {
+    /* background-color: aquamarine; */
+    
+    
+}
+
+.productList {
+    /* margin: 0 auto; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5em;
+    width: 70vw;
+    height: auto;
+    margin-bottom: 1.2em;
+    margin: 40px auto;
+}
+
+.addToBasket {
+    /* margin-bottom: 1.2em; */
+    margin-top: 0;
+}
+
+.productInfo {
+    height: auto;
+    display: block;
+    line-height: 7px;
+    /* border: 1px solid red; */
+}
+
+/* product container */
+.productContainer {
+    /* margin: 140px; */
+    /* width: 80vw; */
+    /* margin: 40px auto; */
+}
+
+/* product details */
+.productDetails {
+    width: 85vw;
+    height: auto;
+    
+    border: 1px solid rgb(226, 145, 15); 
+    display: grid;
+    grid-template-columns: 55% 40%;
+    column-gap: 40px;
+    
+    margin-right: 3.5em;
+    margin-left: 4em;
+
+}
+
+/* .productDetails div {
+    border: 1px solid rgb(36, 182, 138);
+    height: 90%;
+} */
+
+/* details image */
+
+/* .detailImagesContainer div img{
+    width: 400px;
+    height: 80%;  
+   
+} */
+
+.detailImagesContainer {
+    width : auto;
+    display: grid;
+    grid-template-columns: 35% 64%;
+    column-gap: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
+
+}
+
+@media  
+
+.detailsImageBig {
+    /* height: 500px !important;
+      */
+}
+
+.multipleDetailImages {
+    height: 60vh;
+    width: auto;
+    border: 1px solid tomato;
+    margin-left: .5em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
+    /* margin-right: 0px; */
+}
+
+.detailsImageBigContainer {
+    height: 50vh;
+    /* width: 90%; */
+    border: 1px solid lawngreen;
+}
+
+.detailsImageBigContainer img {
+    max-width: 95%;
+    max-height: 90%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* .multipleDetailImages img {
+    display: block;
+    max-width: fit-content;
+    max-height: fit-content;
+} */
+/* sigle gallery image */
+.singleGalleryImage {
+    height: 80px;
+    width: 80px;
+    border: 1px solid rgb(12, 178, 170);
+    margin: .5em;
+    
+}
+
+.product {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1.5em;
+    border: 1px solid rgb(204, 204, 204);
+    height: 240px;
+    width: 200px;
+    align-content: center;
+}
+
+.images {
+    max-height: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    /* display: none;
+    visibility: hidden; */
+}
+
+
+img {
+
+   
+    
+    /* max-width: 150px;n-width: 150px;
+    min-height: 150px; */
+    /* height: auto;
+    width: auto; */
+}
+
+.imgList {
+    display: flex;
+    flex-direction: row;
+}
+
+.categoryTitle {
+    text-transform: capitalize;
+}
+
+
