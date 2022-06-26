@@ -1,8 +1,11 @@
 import React from 'react'
 import {ApolloClient,InMemoryCache, ApolloProvider, HttpLink, from,  } from '@apollo/client'
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
-import ProductList from './Components/GetData'
+import ProductHome from './Components/GetData'
+import ProductCategory from './Components/ProductCategory'
+import Header from './Components/Header'
 import ProductDetails from './Components/ProductDetails'
+import CartItem from './Components/CartItem'
 // import ProductDetails from './Details'
 // import Products from './Components/Products'
 import{onError} from '@apollo/client/link/error'
@@ -31,8 +34,6 @@ class App extends React.Component {
           displayItems : []
       }
   }
-  
-  
 
  render() {
   //  console.log(this.props)
@@ -40,12 +41,18 @@ class App extends React.Component {
       <Router>
       <ApolloProvider client={client}>
           <div>
-          <Switch>
-            <Route exact path="/" component={ProductList} />
-            
-            <Route path='/product-details/:id' component={ProductDetails} />
-            
-          </Switch>
+            < Header />
+            <Switch>              
+              <Route exact path="/" component={ProductHome } />
+              
+              <Route path='/category/:category' component={ProductCategory} />
+
+              <Route path='/product-details/:id' component={ProductDetails} />
+
+              <Route path='/view_bag' component={CartItem} />
+              
+              <Route path='/check_out' />              
+            </Switch>
           </div>
       </ApolloProvider>
       </Router>

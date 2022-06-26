@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 // import {useQuery} from '@apollo/client'
 // import {LOAD_DATA} from "../GraphQL/Queries"
 import {graphql } from "@apollo/client/react/hoc"
-import { ApolloCache, gql} from "@apollo/client";
+import { gql} from "@apollo/client";
 import Product from "./Product";
+import GetCategory from "./GetCategory";
+
   
 const LOAD_DATA = gql`
 {
@@ -12,7 +14,7 @@ const LOAD_DATA = gql`
     products {
       id
       name
-      inStock
+      inStock      
       category
       prices {
         currency {
@@ -32,12 +34,25 @@ const LOAD_DATA = gql`
         }
       }
       gallery
+      brand
+      description
     }
   }
 }
 `
+// class CategoryBotton extends React.Component{
+// render(){
+//   return(
+//     <header>
+//       <div>
+        
+//       </div>
+//     </header>
+//   )
+// }
+// }
 
-class ProductList extends React.Component{
+class ProductHome extends React.Component{
     constructor(props) {
         super()
         this.state= {
@@ -45,31 +60,33 @@ class ProductList extends React.Component{
         }
     }
    
-
+    
    render() {
     // const { data: { loading, error, data } } = this.props;
     const {data} = this.props
-    const catz = data.category
-    let products = []
-    let productItem = []
-    let catTitile = "clothes"
+    const category = data.category
+    let products = []   
 
-    if (catz){
-      products = catz.products
+    if (category){
+      products = category.products 
       
     }
     // const productComponent = productItem.map((items) => <Product key={items.id} item={items} />)
     return(
       <>        
         {products.length!==0 &&(
-        <Product item={products} />
+        <>
+          <GetCategory item={products} />
+          <Product item={products} />
+        </>
         )}
       </>
-    )       
+    )    
    }
     
 }
   
-  export default graphql(LOAD_DATA)(ProductList)
+  export default graphql(LOAD_DATA)(ProductHome)
 
+  
   

@@ -1,0 +1,27 @@
+
+.swatchNameValueContainer {
+    /* line-height: 5px; */
+    
+}
+
+.swatchAttributeContainer {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around}
+
+.textAttributeContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;    
+}
+
+.attributeButtons:hover {
+    color: aqua;
+}
+
+.swatchButtons {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+   
+}
